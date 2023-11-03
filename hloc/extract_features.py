@@ -38,6 +38,19 @@ confs = {
             'resize_max': 1024,
         },
     },
+    'superpoint_mod': {
+        'output': 'feats-superpoint-n1000-rmax640',
+        'model': {
+            'name': 'superpoint',
+            'nms_radius': 3,
+            'max_keypoints': 1000,
+        },
+        'preprocessing': {
+            'grayscale': True,
+            'resize_max': 640,
+            'resize_force': True,
+        },
+    },
     # Resize images to 1600px even if they are originally smaller.
     # Improves the keypoint localization if the images are of good quality.
     'superpoint_max': {
